@@ -2,7 +2,7 @@
 
 Aplicação web para aumentar o desafio do jogo de tirar peças da torre. Sorteia ações para o jogo de torre de peças para definir em qual nível da torre e qual a posição alvo da peça a ser retirada na próxima jogada
 
-**Acesse online:**  [AlvoDaTorre](https://brendatrindade.github.io/AlvoDaTorre/)
+**Acesse online:**  [AlvoDaTorre](https://brendatrindade.github.io/alvo-da-torre/)
 
 ## Como funciona
 
