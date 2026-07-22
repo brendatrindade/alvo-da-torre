@@ -182,58 +182,25 @@ h2 {
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 500px;
+  min-height: 300px;
   overflow: hidden;
-}
-
-.tower-scene::after {
-  content: "";
-  position: absolute;
-  bottom: 28px;
-  width: min(78%, 320px);
-  height: 38px;
 }
 
 .tower-art {
   position: relative;
   z-index: 1;
-  width: min(128%, 320px);
-  max-height: 470px;
   object-fit: contain;
   object-position: center;
   transform-origin: center;
-  clip-path: inset(7% 22% 5% 22%);
 }
 
 .intro-screen .tower-art {
-  width: min(132%, 320px);
-  max-height: 520px;
+  width: min(100%, 320px);
+  max-height: 320px;
 }
 
 .tower-scene.is-rolling .tower-art {
   animation: targetReveal 180ms ease-in-out infinite alternate;
-}
-
-.tower-callout {
-  left: 18px;
-  bottom: 18px;
-  display: grid;
-  gap: 2px;
-  min-width: 128px;
-  padding: 10px 12px;
-  border-radius: 12px;
-  background: #d8b674;
-  color: #845237;
-  font-size: 14px;
-  font-weight: 800;
-  text-align: center;
-  justify-items: center;
-  margin: auto;
-}
-
-.tower-callout strong {
-  color: #845237;
-  font-size: 14px;
 }
 
 .draw-result {
@@ -536,7 +503,7 @@ h2 {
   }
 
   .tower-scene {
-    min-height: 420px;
+    min-height: 100px;
   }
 
   .history {
@@ -592,16 +559,11 @@ h2 {
     grid-template-columns: 1fr;
   }
   .tower-scene {
-    min-height: 370px;
+    min-height: 100px;
   }
   .tower-art {
-    width: min(82%, 240px);
-    max-height: 315px;
-  }
-  .tower-callout {
-    left: 12px;
-    bottom: 12px;
-    min-width: 110px;
+    width: min(90%, 280px);
+    max-height: 280px;
   }
   .draw-result strong {
     color: #845237;
@@ -610,11 +572,5 @@ h2 {
   .option-track span {
     font-size: 9px;
     font-weight: 700;
-  }
-  .tower-callout {
-    font-size: 10px;
-  }
-  .tower-callout strong {
-    font-size: 10px;
   }
 }
