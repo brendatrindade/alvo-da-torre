@@ -16,9 +16,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 15% 12%, rgba(250, 204, 21, 0.24), transparent 30%),
-    radial-gradient(circle at 88% 8%, rgba(245, 158, 11, 0.22), transparent 24%),
-    linear-gradient(155deg, #1a1510 0%, #2a2117 54%, #3a2816 100%);
+    #1a1510;
   }
   
   button {
@@ -82,9 +80,9 @@ h2 {
 }
 
 h1 {
-  max-width: 14ch;
+  max-width: 20ch;
   color: #fff7ed;
-  font-size: 50px;
+  font-size: 36px;
   line-height: 0.98;
 }
 

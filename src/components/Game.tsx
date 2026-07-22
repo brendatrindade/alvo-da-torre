@@ -174,7 +174,7 @@ export default function Game() {
 
 				<div className="intro-copy">
 					<p className="eyebrow">Sorteador de ações</p>
-					<h1>Torre de Peças</h1>
+					<h1>Alvo da Torre de Peças</h1>
 					<p className="subtitle">
 						Um sorteador para deixar cada jogada ainda mais desafiadora: defina o alvo
 						da vez e tente retirar a peça sem derrubar a torre
