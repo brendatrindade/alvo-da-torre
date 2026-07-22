@@ -208,28 +208,11 @@ export default function Game() {
 				/>
 
 				<div className="draw-panel">
-					<ModeSelector mode={mode} setMode={changeMode} compact disabled={isRolling} />
-
 					<DrawResult
 						level={selectedLevel}
 						target={selectedTarget}
 						isRolling={isRolling}
 					/>
-
-					<div className="wheel-board" aria-label="Acompanhamento do sorteio">
-						<OptionRail
-							title="Nível da torre"
-							options={LEVELS}
-							selected={selectedLevel}
-							isRolling={rollingTarget === 'level' || rollingTarget === 'both'}
-						/>
-						<OptionRail
-							title="Alvo da retirada"
-							options={TARGETS}
-							selected={selectedTarget}
-							isRolling={rollingTarget === 'target' || rollingTarget === 'both'}
-						/>
-					</div>
 
 					{mode === 'combined' ? (
 						<button className="btn-primary" onClick={drawPair} disabled={isRolling}>
@@ -257,6 +240,21 @@ export default function Game() {
 						</div>
 					)}
 
+					<div className="wheel-board" aria-label="Acompanhamento do sorteio">
+						<OptionRail
+							title="Nível da torre"
+							options={LEVELS}
+							selected={selectedLevel}
+							isRolling={rollingTarget === 'level' || rollingTarget === 'both'}
+						/>
+						<OptionRail
+							title="Alvo da retirada"
+							options={TARGETS}
+							selected={selectedTarget}
+							isRolling={rollingTarget === 'target' || rollingTarget === 'both'}
+						/>
+					</div>
+
 					<button
 						className="btn-secondary"
 						onClick={resetGame}
@@ -265,6 +263,8 @@ export default function Game() {
 						<ArrowPathIcon className="btn-icon" />
 						Resetar partida
 					</button>
+
+					<ModeSelector mode={mode} setMode={changeMode} compact disabled={isRolling} />
 				</div>
 			</section>
 
@@ -378,12 +378,7 @@ interface TowerIllustrationProps {
 	isRolling?: boolean
 }
 
-function TowerIllustration({
-	variant,
-	level = null,
-	target = null,
-	isRolling = false,
-}: TowerIllustrationProps) {
+function TowerIllustration({ target = null, isRolling = false }: TowerIllustrationProps) {
 	const imageName = target ? TARGET_IMAGE_BY_TARGET[target] : 'limpo.svg'
 	const imageSrc = `${ASSET_BASE}alvo_da_retirada/${imageName}`
 
@@ -393,19 +388,6 @@ function TowerIllustration({
 			aria-label="Ilustração da torre"
 		>
 			<img className="tower-art" src={imageSrc} alt="" />
-
-			{variant === 'playing' && (
-				<div className="tower-callout">
-					{level && target ? (
-						<>
-							<strong>{level}</strong>
-							<span>{target}</span>
-						</>
-					) : (
-						<span>Aguardando sorteio</span>
-					)}
-				</div>
-			)}
 		</div>
 	)
 }
